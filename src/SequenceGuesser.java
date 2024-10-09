@@ -149,10 +149,9 @@ public class SequenceGuesser {
 
 
 //    This method takes the list of number sequences as input and;
-//1) selects a random sequence from the list, 2) reads the guessed
-//sequence from the user, and 3) checks if the guessed sequence
-//exists in the provided list of sequences and returns true if it exists,
-//false otherwise.
+//1) selects a random sequence from the list,
+//2) reads the guessed sequence from the user, and
+//3) checks if the guessed sequence exists in the provided list of sequences and returns true if it exists, false otherwise.
     //this is the new recursive version
     public static int isValidSequence_rec(ArrayList<String> sequences, String guessed, int low, int high){
             //returns true when the sequence is found, and it is the same length as the target sequence
@@ -171,6 +170,8 @@ public class SequenceGuesser {
 
 
 
+    //This method uses a binary search algorithm that runs in the main method when the list is sorted.
+    //Using recurision, the method takes an array of Strings, which String was guessed, and the low and high limits of the array to be checked.
     public static int isValidSequence_binary(ArrayList<String> sequences, String guessed, int low, int high){
         if(low > high) return -1;
         int middle = (high + low) / 2;
